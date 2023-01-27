@@ -25,10 +25,11 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button onclick="phoneItemEdit(false)" class="btn btn-default"><i
+                           <button onclick="cardItemEdit('phone', 1219, false)" class="btn btn-default"><i
                                  class="fas fa-minus"></i></button>
-                           <input id="phone-quantity" type="text" class="form-control text-center" value="1">
-                           <button onclick="phoneItemEdit(true)" class="btn btn-default"><i
+                           <input id="phone-quantity" type="text" class="form-control text-center product-quantity"
+                              value="1" disabled="disabled">
+                           <button onclick="cardItemEdit('phone', 1219, true)" class="btn btn-default"><i
                                  class="fas fa-plus"></i></button>
                         </div>
                         <h5 id="phone-price">$1219</h5>
@@ -45,10 +46,11 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button onclick="cardItemEdit(false)" class="btn btn-default"><i
+                           <button onclick="cardItemEdit('case', 59,  false)" class="btn btn-default"><i
                                  class="fas fa-minus"></i></button>
-                           <input id="case-quantity" type="text" class="form-control text-center" value="1">
-                           <button onclick="cardItemEdit(true)" class="btn btn-default"><i
+                           <input id="case-quantity" type="text" class="form-control text-center product-quantity"
+                              value="1" disabled="disabled">
+                           <button onclick="cardItemEdit('case', 59, true)" class="btn btn-default"><i
                                  class="fas fa-plus"></i></button>
 
                         </div>
@@ -63,14 +65,14 @@
 
                      <div class="col-md-8">
                         <h5>Subtotal: </h5>
-                        <h5>Tax:</h5>
+                        <h5>Delivery Cost:</h5>
                         <h5>Total:</h5>
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5>$1,278</h5>
-                        <h5>$0</h5>
-                        <h5>$1,278</h5>
+                        <h5 id="subtotal-cost">$1,278</h5>
+                        <h5>$<span id="delivery-cost">50</span></h5>
+                        <h5 id="total-cost">$1328</h5>
                      </div>
                   </div>
                </div>
